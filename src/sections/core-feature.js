@@ -10,7 +10,7 @@ const data = {
   subTitle: 'Duke',
   title: 'How to earn Duke',
   description:
-    'The best way to increase crypto adoption is to incentivize those who add value to it; that is the purpose of Duke tokens. You can only get Duke tokens by providing liquidity on decentralized exchange across chains like Fastswap.exchange, Fastswap.finance, uniswap.com, sushiswap.org, pancake.finance quickstep.finance etc',
+    'The best way to increase crypto adoption is to incentivize those who add value to it; that is the purpose of Duke tokens. You can only get Duke tokens by providing liquidity on decentralized exchange across chains like Fastswap.exchange, Fastswap.finance, uniswap.com, sushiswap.org, pancake.finance quickswap.exchange etc',
   btnName: 'Get Started',
   btnURL: '#',
 };
