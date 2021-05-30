@@ -29,15 +29,22 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
+      // options: {
+      //   fonts: [
+      //     {
+      //       family: `DM Sans`,
+      //       variants: [`400`, `500`, `700`],
+      //     },
+      //   ],
+      // },
       options: {
         fonts: [
-          {
-            family: `DM Sans`,
-            variants: [`400`, `500`, `700`],
-          },
+          `limelight`,
+          `source DM Sans pro\:300,400,400i,700` // you can also specify font weights and styles
         ],
-      },
+        display: 'swap'
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
