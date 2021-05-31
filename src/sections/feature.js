@@ -81,7 +81,7 @@ export default function Feature() {
       <Container>
         <SectionHeader
           slogan="Duke"
-          title="Doke Token Tokenomics"
+          title="Duke Token Tokenomics"
         />
 
         <Grid sx={styles.grid}>
