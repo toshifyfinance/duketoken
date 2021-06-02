@@ -73,21 +73,30 @@ export default function Subscribe() {
   };
   return (
     <section>
-      <Container>
+      <Container sx={styles.mainBox}>
         <Box sx={styles.contentBox}>
           <Box sx={styles.contentBoxInner}>
             <Heading as="h2" sx={styles.title}>
-              Contact Us
+              Duke
             </Heading>
             <Text as="p" sx={styles.description}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
-              tempor incididunt labore dolore.
+              Duke Token is a decentralized meme token to incentivize the crypto space. Duke tokens is an experimental community driven project and the first with underlying utility & products.
             </Text>
-            <form onSubmit={subscribe}>
+            <Text as="p" sx={styles.description2}>
+              Duke Token is developed and supported by FastSwap.
+            </Text>
+            <Text as="p" sx={styles.description2}>
+              <hr></hr>
+              <span>Fastswap.finance (BSC Network)</span><br></br>
+              <span>FastSwap.exchange (ETH Network)</span>
+            </Text>
+            
+            {/* <form onSubmit={subscribe}>
               <Flex sx={styles.subscribeForm}>
                 <label htmlFor="email" sx={{ variant: 'styles.srOnly' }}>
                   Email Address
                 </label>
+                
                 <Input
                   ref={inputEl}
                   id="email"
@@ -117,7 +126,7 @@ export default function Subscribe() {
                     : 'Submitting...'}
                 </Button>
               </Flex>
-            </form>
+            </form> */}
           </Box>
         </Box>
       </Container>
@@ -126,6 +135,9 @@ export default function Subscribe() {
 }
 
 const styles = {
+  mainBox: {
+    paddingBottom: '120px'
+  },
   contentBox: {
     backgroundColor: 'primary',
     textAlign: 'center',
@@ -133,7 +145,7 @@ const styles = {
     py: ['60px', null, 8],
   },
   contentBoxInner: {
-    width: ['100%', null, '540px', '600px'],
+    width: ['100%', null, '540px', '900px'],
     mx: 'auto',
     mt: -1,
     px: [3, 5],
@@ -147,7 +159,13 @@ const styles = {
     mb: [2, 3],
   },
   description: {
-    fontSize: ['15px', 2, null, null, null, '17px', null, 3],
+    fontSize: ['18px', 3, null, null, null, '20px', null, 4],
+    color: 'white',
+    lineHeight: [1.85, null, null, 2],
+    px: [0, null, 5],
+  },
+  description2: {
+    fontSize: ['18px', 3, null, null, null, '20px', null, 4],
     color: 'white',
     lineHeight: [1.85, null, null, 2],
     px: [0, null, 5],

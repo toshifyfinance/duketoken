@@ -29,12 +29,12 @@ export default function IndexPage() {
         <ServiceSection />
         <Feature />
         <WorkFlow />
-        {/* <KeyFeature /> */}
         <Package />
         {/* <TeamSection /> */}
         {/* <TestimonialCard /> */}
         {/* <BlogSection /> */}
-        {/* <Subscribe /> */}
+        <Subscribe />
+        {/* <KeyFeature /> */}
       </Layout>
     </StickyProvider>
   );

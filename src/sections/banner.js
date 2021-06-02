@@ -30,7 +30,9 @@ export default function Banner() {
           <Text as="p" variant="heroSecondary">
             Duke Token is a decentralized meme token to incentivize the crypto space. Duke is not a Doge coin killer, unlike other Shib inu tokens. Duke tokens is a community driven project like doge coin to increase crypto adoptions. Duke Token is just a joke, it was created for fun sake and experiment.
           </Text>
-          {/* <Button variant="primary">Explore</Button> */}
+          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://fastswap.finance//#/swap?inputCurrency=0x4d338614fc25afe6edf3994f331b4bad32fb3c6a&outputCurrency=0xaee234825dc4687fae606485c1ebd06336052bcc", '_blank')}>Buy Duke on fastswap</Button>
+          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xaee234825dc4687fae606485c1ebd06336052bcc", '_blank')}>Buy Duke on pancakeswap</Button>
+          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://www.dextools.io/app/pancakeswap/pair-explorer/0xe545eabdd3b07c68b0d0df130a24b2dc4a10be61", '_blank')}>Dextools</Button>
         </Box>
 
         <Box sx={styles.banner.imageBox}>
@@ -97,5 +99,8 @@ const styles = {
         height: [245, 'auto'],
       },
     },
+    buttonGroup: {
+      margin: '5px'
+    }
   },
 };
