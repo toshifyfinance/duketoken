@@ -1,6 +1,6 @@
 import Chat from 'assets/widget/twitter.svg';
 import Community from 'assets/widget/telegram.svg';
-import Github from 'assets/widget/github.svg';
+import Megaphone from 'assets/widget/megaphone.svg';
 
 export default {
   widgets: [
@@ -19,6 +19,15 @@ export default {
       iconHref: 'http://T.me/duketokencom',
       altText: 'Chat',
       title: 'Chat Communication',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+    },
+    {
+      id: 3,
+      iconSrc: Megaphone,
+      iconHref: 'http://t.me/toshifyfinance',
+      altText: 'Announcement',
+      title: 'Announcement',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
     }

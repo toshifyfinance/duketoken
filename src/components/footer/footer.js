@@ -39,6 +39,9 @@ export default function Footer() {
             </nav>
           </Box> */}
           <Text sx={styles.footer.copyright}>
+            Duke Token is developed and supported by FastSwap. &nbsp; Fastswap.finance (BSC Network)  &nbsp;  FastSwap.exchange (ETH Network)
+          </Text>
+          <Text sx={styles.footer.copyright}>
             Copyright by {new Date().getFullYear()} DUKE, Inc
           </Text>
         </Box>
@@ -98,8 +101,8 @@ const styles = {
     gridTemplateColumns: [
       'repeat(1,1fr)',
       null,
-      'repeat(2,1fr)',
-      'repeat(2,1fr)',
+      'repeat(3,1fr)',
+      'repeat(3,1fr)',
     ],
     widgetItem: {
       textAlign: 'center',
