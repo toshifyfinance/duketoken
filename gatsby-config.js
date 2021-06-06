@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Duke`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Duke Inu is the first meme Token with utility and underlying products. Yield Farming, Staking & IDO Participation.  Developed by FastSwap`,
+    author: `@DukeToken`,
   },
   plugins: [
     `gatsby-plugin-theme-ui`,
