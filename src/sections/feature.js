@@ -68,8 +68,8 @@ const data = [
   {
     id: 8,
     imgSrc: Partnership,
-    altText: '1 billion  1%',
-    title: '1 billion  1%',
+    altText: '1 billion  0.1%',
+    title: '1 billion  0.1%',
     text:
       'Indians Covid19 relief.',
   },
