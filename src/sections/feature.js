@@ -76,10 +76,10 @@ const data = [
   {
     id: 9,
     imgSrc: Partnership,
-    altText: 'Quarterly airdrop  0.9%',
-    title: 'Quarterly airdrop  0.9%',
+    altText: 'Bug bounty  0.9%',
+    title: 'Bug bounty  0.9%',
     text:
-      'Quarterly airdrop for those that user our liquidity aggregator.',
+      '',
   },
 ];
 
