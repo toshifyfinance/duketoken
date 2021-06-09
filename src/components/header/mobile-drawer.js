@@ -3,6 +3,7 @@ import { Box } from 'theme-ui';
 import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
 import { DrawerContext } from '../../contexts/drawer/drawer.context';
+import { useStickyState } from '../../contexts/app/app.provider';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'react-scroll';
 import {
@@ -11,7 +12,30 @@ import {
   FaGithubAlt,
   FaDribbble,
 } from 'react-icons/fa';
-import menuItems from './header.data';
+import menuItems_pre from './header.data';
+
+const menuItems_cn = [
+  {
+    path: 'home',
+    label: '主要的',
+  },
+  {
+    path: 'corefeature',
+    label: '如何赚取',
+  },
+  {
+    path: 'whyduketoken',
+    label: '为什么选择 Duke 代币',
+  },
+  {
+    path: 'tokenomics',
+    label: '代币经济学',
+  },
+  {
+    path: 'dukepools',
+    label: 'Duke 游泳池',
+  },
+];
 
 const social = [
   {
@@ -33,6 +57,15 @@ const social = [
 ];
 
 const MobileDrawer = () => {
+  const isEn = useStickyState('isEn');
+  var menuItems = [];
+
+  if(!isEn) {
+    menuItems = menuItems_cn;
+  } else {
+    menuItems = menuItems_pre;
+  }
+
   const { state, dispatch } = useContext(DrawerContext);
 
   // Toggle drawer

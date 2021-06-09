@@ -1,9 +1,24 @@
 /** @jsx jsx */
 import { jsx, Box, Grid, Container, Image, Heading, Text } from 'theme-ui';
+import { useStickyState } from '../../contexts/app/app.provider';
 import { Link } from 'components/link';
-import data from './footer.data';
+import data_pre from './footer.data';
 import FooterLogo from 'assets/logo.png';
+
+
 export default function Footer() {
+  const isEn = useStickyState('isEn');
+  var data = data_pre;
+  var data_text = '';
+
+  if(!isEn) {
+    data.widgets = data_pre.widgets_cn;
+    data_text = 'Duke Token 由 FastSwap 开发和支持。';
+  } else {
+    data.widgets = data_pre.widgets_en;
+    data_text = 'Duke Token is developed and supported by FastSwap.';
+  }
+
   return (
     <footer sx={styles.footer}>
       <Container>
@@ -39,7 +54,7 @@ export default function Footer() {
             </nav>
           </Box> */}
           <Text sx={styles.footer.copyright}>
-            Duke Token is developed and supported by FastSwap. &nbsp; Fastswap.finance (BSC Network)  &nbsp;  FastSwap.exchange (ETH Network)
+            {data_text} &nbsp; Fastswap.finance (BSC Network)  &nbsp;  FastSwap.exchange (ETH Network)
           </Text>
           <Text sx={styles.footer.copyright}>
             Copyright by {new Date().getFullYear()} DUKE, Inc

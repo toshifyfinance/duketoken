@@ -5,10 +5,46 @@ import { Link } from 'react-scroll';
 import Logo from 'components/logo';
 import LogoDark from 'assets/logo.png';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
+import { useStickyState } from '../../contexts/app/app.provider';
 import MobileDrawer from './mobile-drawer';
-import menuItems from './header.data';
+import menuItems_pre from './header.data';
+
+const menuItems_cn = [
+  {
+    path: 'home',
+    label: '主要的',
+  },
+  {
+    path: 'corefeature',
+    label: '如何赚取',
+  },
+  {
+    path: 'whyduketoken',
+    label: '为什么选择 Duke 代币',
+  },
+  {
+    path: 'tokenomics',
+    label: '代币经济学',
+  },
+  {
+    path: 'dukepools',
+    label: 'Duke 游泳池',
+  },
+];
 
 export default function Header({ className }) {
+  const isEn = useStickyState('isEn');
+  var menuItems = [];
+  var scan_button = '';
+
+  if(!isEn) {
+    menuItems = menuItems_cn;
+    scan_button = '在 bscscan 上查看';
+  } else {
+    menuItems = menuItems_pre;
+    scan_button = 'View on bscscan';
+  }
+
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
@@ -37,7 +73,7 @@ export default function Header({ className }) {
             aria-label="Get Started"
             onClick={() => window.open("https://bscscan.com/token/0xAEe234825dC4687faE606485c1eBD06336052bCc", '_blank')}
           >
-            View on bscscan
+            {scan_button}
           </Button>
 
           <MobileDrawer />
@@ -73,6 +109,11 @@ const styles = {
     transition: 'all 0.4s ease',
     animation: `${positionAnim} 0.4s ease`,
     '.donate__btn': {
+      flexShrink: 0,
+      mr: [15, 20, null, null, 0],
+      ml: ['auto', null, null, null, 0],
+    },
+    '.translate__btn': {
       flexShrink: 0,
       mr: [15, 20, null, null, 0],
       ml: ['auto', null, null, null, 0],

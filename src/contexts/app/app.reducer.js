@@ -1,10 +1,21 @@
 export const initialState = {
   isSticky: false,
   isSidebarSticky: true,
+  isEn: true,
 };
 
 export function reducer(state, { type }) {
   switch (type) {
+    case 'SET_EN':
+      return {
+        ...state,
+        isEn: true,
+      };
+    case 'SET_CN':
+      return {
+        ...state,
+        isEn: false,
+      };
     case 'SET_STICKY':
       return {
         ...state,

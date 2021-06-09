@@ -3,11 +3,13 @@ import { jsx } from 'theme-ui';
 import { Container, Grid, Box, Heading, Text } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 
+import { useStickyState } from '../contexts/app/app.provider';
+
 import PatternBG from 'assets/patternBG.png';
 import ArrowOdd from 'assets/arrowOdd.svg';
 import ArrowEven from 'assets/arrowEven.svg';
 
-const data = [
+const data_en = [
   {
     id: 1,
     title: 'Fastswap bsc pools',
@@ -40,13 +42,61 @@ const data = [
   },
 ];
 
+const data_cn = [
+  {
+    id: 1,
+    title: 'Fastswap bsc 游泳池',
+    text:
+      '即将推出',
+  },
+  {
+    id: 2,
+    title: 'Fastswap eth 游泳池',
+    text:
+      '即将推出',
+  },
+  {
+    id: 3,
+    title: 'Uniswap 游泳池',
+    text:
+      '即将推出',
+  },
+  {
+    id: 4,
+    title: 'Pancake swap 游泳池',
+    text:
+      '即将推出',
+  },
+  {
+    id: 5,
+    title: 'Sushi swap 游泳池',
+    text:
+      '即将推出',
+  },
+];
+
+const data_title_en = "Duke Pools";
+const data_title_cn = "Duke 游泳池";
+
 export default function WorkFlow() {
+  const isEn = useStickyState('isEn');
+  var data = [];
+  var data_title = '';
+
+  if(!isEn) {
+    data = data_cn;
+    data_title = data_title_cn;
+  } else {
+    data = data_en;
+    data_title = data_title_en;
+  }
+
   return (
     <section id="dukepools" sx={styles.workflow}>
       <Container>
         <SectionHeader
           slogan="duke"
-          title="Duke Pools"
+          title={data_title}
           isWhite={true}
         />
 

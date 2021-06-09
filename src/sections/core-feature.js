@@ -4,9 +4,11 @@ import TextFeature from 'components/text-feature';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import { useStickyState } from '../contexts/app/app.provider';
+
 import shapePattern from 'assets/shape-pattern2.png';
 
-const data = {
+const data_en = {
   subTitle: 'Duke',
   title: 'How to earn Duke',
   description:
@@ -15,7 +17,25 @@ const data = {
   btnURL: '#',
 };
 
+const data_cn = {
+  subTitle: 'Duke',
+  title: '如何赚取Duke',
+  description:
+    '提高加密采用率的最佳方法是激励那些为其增加价值的人； 这就是杜克代币的目的。 您只能通过在跨链的去中心化交易所上提供流动性来获得 Duke 代币，例如 fastswap.exchange、fastswap.finance、uniswap.com、sushiswap.org、pancakeswap.finance、quickswap.exchange 等',
+  btnName: '开始',
+  btnURL: '#',
+};
+
 export default function CoreFeature() {
+
+  const isEn = useStickyState('isEn');
+  var data = {};
+
+  if(!isEn) {
+    data = data_cn;
+  } else {
+    data = data_en;
+  }
   // Graphql image query
   const dataThumb = useStaticQuery(graphql`
     query {

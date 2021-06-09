@@ -8,7 +8,9 @@ import ButtonGroup from 'components/button-group';
 import SectionHeader from 'components/section-header';
 import { IoIosCheckmarkCircle, IoIosCloseCircle } from 'react-icons/io';
 
-const packages = {
+import { useStickyState } from '../contexts/app/app.provider';
+
+const packages_en = {
   monthly: [
     {
       id: 1,
@@ -65,113 +67,71 @@ const packages = {
         }
       ],
     }
-  ],
-  // annual: [
-  //   {
-  //     id: 1,
-  //     name: 'Free Plan',
-  //     description: 'For Small teams or office',
-  //     buttonText: 'Start free trail',
-  //     priceWithUnit: '$0',
-  //     points: [
-  //       {
-  //         id: 1,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: "1,000's of Templates",
-  //         isAvailable: true,
-  //       },
-  //       {
-  //         id: 2,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: 'Drag & Drop Builder',
-  //         isAvailable: true,
-  //       },
-  //       {
-  //         id: 3,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: 'Blog Support Tools',
-  //         isAvailable: true,
-  //       },
-  //       {
-  //         id: 4,
-  //         icon: <IoIosCloseCircle />,
-  //         text: 'eCommerce Store ',
-  //         isAvailable: true,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Business king',
-  //     description: 'For Enterprise business',
-  //     priceWithUnit: '$25',
-  //     buttonText: 'Create account',
-  //     anotherOption: 'Or Start 10 Days trail',
-  //     points: [
-  //       {
-  //         id: 1,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: 'eCommerce Store',
-  //         isAvailable: true,
-  //       },
-  //       {
-  //         id: 2,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: 'Blog Support Tools',
-  //         isAvailable: true,
-  //       },
-  //       {
-  //         id: 3,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: "1,000's of Templates",
-  //         isAvailable: true,
-  //       },
-  //       {
-  //         id: 4,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: 'Drag & Drop Builder ',
-  //         isAvailable: true,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 3,
-  //     header: 'Suggested',
-  //     headerIcon: <IoIosCheckmarkCircle />,
-  //     name: 'Pro Master',
-  //     description: 'For pro level developers',
-  //     priceWithUnit: '$39',
-  //     buttonText: 'Create account',
-  //     anotherOption: 'Or Start 10 Days trail',
-  //     points: [
-  //       {
-  //         id: 1,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: 'eCommerce Store',
-  //         isAvailable: true,
-  //       },
-  //       {
-  //         id: 2,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: 'Blog Support Tools',
-  //         isAvailable: true,
-  //       },
-  //       {
-  //         id: 3,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: "1,000's of Templates",
-  //         isAvailable: true,
-  //       },
-  //       {
-  //         id: 4,
-  //         icon: <IoIosCheckmarkCircle />,
-  //         text: 'Drag & Drop Builder ',
-  //         isAvailable: true,
-  //       },
-  //     ],
-  //   },
-  // ],
+  ]
 };
+
+const packages_cn = {
+  monthly: [
+    {
+      id: 1,
+      name: '即时奖励🏆',
+      description: "对于杜克网络中的每笔交易（买卖），2.5% 中的 1% 将分配给代币持有者。 这意味着您通过在钱包中持有杜克大学来赚取更多收入。 交易的 0.5% 交给 Devs 进行开发。",
+      buttonText: '开始免费试用',
+      priceWithUnit: '$0',
+      points: [
+        {
+          id: 1,
+          icon: <IoIosCheckmarkCircle />,
+          text: 'Drag & Drop Builder',
+          isAvailable: true,
+        },
+        {
+          id: 2,
+          icon: <IoIosCheckmarkCircle />,
+          text: "1,000's of Templates",
+          isAvailable: true,
+        },
+        {
+          id: 3,
+          icon: <IoIosCheckmarkCircle />,
+          text: 'Blog Support Tools',
+          isAvailable: true,
+        },
+        {
+          id: 4,
+          icon: <IoIosCloseCircle />,
+          text: 'eCommerce Store ',
+          isAvailable: true,
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: '瞬间燃烧🔥',
+      description: "每笔交易的 1% 将发送到销毁地址 Instant 以减少 Duke 的流通量并鼓励 HODL。",
+      priceWithUnit: '$15',
+      buttonText: 'Create account',
+      anotherOption: 'Or Start 14 Days trail',
+      points: [
+        {
+          id: 1,
+          icon: <IoIosCheckmarkCircle />,
+          text: 'Drag & Drop Builder',
+          isAvailable: true,
+        },
+        {
+          id: 2,
+          icon: <IoIosCheckmarkCircle />,
+          text: "1,000's of Templates",
+          isAvailable: true,
+        }
+      ],
+    }
+  ]
+};
+
+const data_title_en = "Duke Token stats";
+const data_title_cn = "Duke 代币统计";
 
 const responsive = {
   desktop: {
@@ -192,27 +152,30 @@ const responsive = {
 };
 
 export default function Package() {
-  const { monthly, annual } = packages;
-  const [state, setState] = useState({
-    active: 'monthly',
-    pricingPlan: monthly,
-  });
+  const isEn = useStickyState('isEn');
+  var packages = [];
+  var data_title = '';
 
-  // const handlePricingPlan = (plan) => {
-  //   if (plan === 'annual') {
-  //     setState({
-  //       ...state,
-  //       active: 'annual',
-  //       pricingPlan: annual,
-  //     });
-  //   } else {
-  //     setState({
-  //       ...state,
-  //       active: 'monthly',
-  //       pricingPlan: monthly,
-  //     });
-  //   }
-  // };
+  if(!isEn) {
+    packages = packages_cn;
+    data_title = data_title_cn;
+  } else {
+    packages = packages_en;
+    data_title = data_title_en;
+  }
+
+  console.log(packages);
+
+  // const { monthly, annual } = packages;
+  // const [state, setState] = useState({
+  //   active: 'monthly',
+  //   pricingPlan: monthly,
+  // });
+
+  var wrapped_packages = {
+    active: 'monthly',
+    pricingPlan: packages
+  };
 
   const sliderParams = {
     additionalTransfrom: 0,
@@ -242,7 +205,7 @@ export default function Package() {
       <Container>
         <SectionHeader
           slogan="Duke"
-          title="Duke Token stats"
+          title={data_title}
         />
         {/* <Flex sx={styles.buttonGroup}>
           <Box sx={styles.buttonGroupInner}>
@@ -266,10 +229,10 @@ export default function Package() {
         </Flex> */}
         <Box sx={styles.pricingWrapper} className="pricing__wrapper">
           <Carousel {...sliderParams}>
-            {state.pricingPlan.map((packageData) => (
+            {packages.monthly.map((packageData) => (
               <Box
                 sx={styles.pricingItem}
-                key={`${state.active}-card--key${packageData.id}`}
+                key={`monthly-card--key${packageData.id}`}
               >
                 <PriceCard data={packageData} />
               </Box>

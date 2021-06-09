@@ -22,7 +22,9 @@ import shapePattern from 'assets/shape-pattern1.png';
 import Smart from 'assets/services/smart.svg';
 import Secure from 'assets/services/secure.svg';
 
-const data = {
+import { useStickyState } from '../contexts/app/app.provider';
+
+const data_en = {
   subTitle0: 'Duke',
   subTitle1: 'Duke inu the first meme Token with underlying products and instant rewards for holders.',
   subTitle2: 'This is the list of our products in development that will earn Duke token by using it or providing LPs.',
@@ -47,7 +49,41 @@ const data = {
   ],
 };
 
+const data_cn = {
+  subTitle0: 'Duke',
+  subTitle1: 'Duke inu 是第一个具有基础产品和即时奖励的 meme 代币。',
+  subTitle2: '这是我们正在开发的产品列表，这些产品将通过使用它或提供 LP 来获得 Duke 代币。',
+  title: '为什么选择 Duke 代币？',
+  features: [
+    {
+      id: 1,
+      imgSrc: Smart,
+      altText: '发射点 ',
+      title: '发射点 ',
+      text:
+        "即使您没有获得分配，使用 launchspot 参与我们的 IDO 也会为您赚取 Duke 代币。 您还将被允许使用您的 Duke 代币来抵押和参与我们的 IDO。",
+    },
+    {
+      id: 2,
+      imgSrc: Secure,
+      altText: '保险库',
+      title: '保险库',
+      text:
+        '虽然我们帮助您通过多种协议（如 AAVE、Compound 等）管理和优化您的资金，但您将获得 Duke 代币作为收益利息的额外奖励。',
+    },
+  ],
+};
+
 export default function ServiceSection() {
+
+  const isEn = useStickyState('isEn');
+  var data = {};
+
+  if(!isEn) {
+    data = data_cn;
+  } else {
+    data = data_en;
+  }
   // Graphql image query
   const dataThumb = useStaticQuery(graphql`
     query {
