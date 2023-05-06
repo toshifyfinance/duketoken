@@ -62,6 +62,7 @@ export default function Banner() {
           <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://fastswap.finance//#/swap?inputCurrency=0x4d338614fc25afe6edf3994f331b4bad32fb3c6a&outputCurrency=0xaee234825dc4687fae606485c1ebd06336052bcc", '_blank')}>{data.btn_fastswap}</Button>
           <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://pancakeswap.finance/swap?outputCurrency=0xaee234825dc4687fae606485c1ebd06336052bcc", '_blank')}>{data.btn_pancakeswap}</Button>
           <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://www.dextools.io/app/pancakeswap/pair-explorer/0xe545eabdd3b07c68b0d0df130a24b2dc4a10be61", '_blank')}>{data.btn_dextools}</Button>
+          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://bscscan.com/address/0xaee234825dc4687fae606485c1ebd06336052bcc", '_blank')}>{data.btn_contract}</Button>
         </Box>
 
         <Box sx={styles.banner.imageBox}>
