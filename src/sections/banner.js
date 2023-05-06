@@ -15,7 +15,8 @@ var data_en = {
       `Duke Token is a decentralized meme token to incentivize the crypto space. Duke tokens is not a Duge coin killer, unlike other Shib inu tokens. Duke tokens is a community driven project like duge coin to increase crypto adoptions. Duke Token is just a joke. it was created for fun sake don't buy it for investment purpose`,
     btn_fastswap: 'Buy Duke on fastswap',
     btn_pancakeswap: 'Buy Duke on pancakeswap',
-    btn_dextools: 'Dextools'
+    btn_dextools: 'Dextools',
+    btn_contract: 'Duke Contract'
 };
 
 var data_cn = {
@@ -24,7 +25,8 @@ var data_cn = {
     'Duke Token 是一種去中心化的 meme 代幣，用於激勵加密空間。 與其他 Shib inu 代幣不同，Duke 代幣不是 Duge 硬幣殺手。 Duke 代幣是一個社區驅動的項目，如 duge coin 以增加加密貨幣的採用。 公爵令只是一個笑話。 它是為了好玩而創建的，不要為了投資目的而購買它。',
   btn_fastswap: '在 fastswap 上购买杜克',
   btn_pancakeswap: '在 pancakeswap 上购买 Duke',
-  btn_dextools: 'Dextools'
+  btn_dextools: 'Dextools',
+  btn_contract: 'Duke 合同'
 };
 
 export default function Banner() {

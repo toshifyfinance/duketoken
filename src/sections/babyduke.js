@@ -26,7 +26,7 @@ var data_cn = {
   btn_fastswap: '在 fastswap 上购买杜克',
   btn_pancakeswap: '在 pancakeswap 上购买 Baby Duke',
   btn_dextools: 'Dextools',
-  btn_contract: 'Baby Duke Contract'
+  btn_contract: 'Baby Duke 合同'
 };
 
 export default function Banner() {
