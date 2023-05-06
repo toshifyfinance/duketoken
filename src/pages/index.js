@@ -3,6 +3,7 @@ import { StickyProvider } from 'contexts/app/app.provider';
 import SEO from 'components/seo';
 import Layout from 'components/layout';
 import Banner from 'sections/banner';
+import BaByDuke from 'sections/babyduke';
 import KeyFeature from 'sections/key-feature';
 import ServiceSection from 'sections/service-section';
 import Feature from 'sections/feature';
@@ -25,6 +26,7 @@ export default function IndexPage() {
       <Layout>
         <SEO title="Duke Token" />
         <Banner />
+        <BaByDuke />
         <CoreFeature />
         <ServiceSection />
         <Feature />

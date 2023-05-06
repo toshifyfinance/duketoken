@@ -10,21 +10,23 @@ import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
 
 var data_en = {
-    title: 'DeFi Decentralized Meme Tokens For Crypto Adoption!',
+    title: 'About Baby Duke',
     text:
-      `Duke Token is a decentralized meme token to incentivize the crypto space. Duke tokens is not a Duge coin killer, unlike other Shib inu tokens. Duke tokens is a community driven project like duge coin to increase crypto adoptions. Duke Token is just a joke. it was created for fun sake don't buy it for investment purpose`,
-    btn_fastswap: 'Buy Duke on fastswap',
-    btn_pancakeswap: 'Buy Duke on pancakeswap',
-    btn_dextools: 'Dextools'
+      `Baby Duke Inu is a revamped version of Duke tokens with a use case in our gaming marketplace and yield farming of our ( FastSwap Token) exchange tokens. Dev is #SAFU since 2017 and has done projects that reached a $10 million market cap and most of his previous projects did more than 500x - 1000x. Tax is 3%, liquidity lock is 10 years, 50% burn, 45% for presale, and liquidity 5% is vested for marketing and development.`,
+    btn_fastswap: 'Baby Duke on fastswap',
+    btn_pancakeswap: 'Buy Baby Duke on pancakeswap',
+    btn_dextools: 'Dextools',
+    btn_contract: 'Baby Duke Contract'
 };
 
 var data_cn = {
-  title: 'DeFi 去中心化 Meme 代币用于加密采用！',
+  title: 'Baby Duke 關於',
   text:
-    'Duke Token 是一種去中心化的 meme 代幣，用於激勵加密空間。 與其他 Shib inu 代幣不同，Duke 代幣不是 Duge 硬幣殺手。 Duke 代幣是一個社區驅動的項目，如 duge coin 以增加加密貨幣的採用。 公爵令只是一個笑話。 它是為了好玩而創建的，不要為了投資目的而購買它。',
+    'Baby Duke Inu 是 Duke 代幣的改進版本，在我們的遊戲市場和我們（FastSwap 代幣）交換代幣的收益農業中有一個用例。 Dev 自 2017 年以來一直是#SAFU，他完成的項目市值達到 1000 萬美元，而他之前的大部分項目的市值都超過 500 倍至 1000 倍。 稅收為 3%，流動性鎖定為 10 年，50% 銷毀，45% 用於預售，流動性 5% 用於營銷和開發。',
   btn_fastswap: '在 fastswap 上购买杜克',
-  btn_pancakeswap: '在 pancakeswap 上购买 Duke',
-  btn_dextools: 'Dextools'
+  btn_pancakeswap: '在 pancakeswap 上购买 Baby Duke',
+  btn_dextools: 'Dextools',
+  btn_contract: 'Baby Duke Contract'
 };
 
 export default function Banner() {
@@ -37,20 +39,9 @@ export default function Banner() {
     data = data_en;
   }
 
-  // Graphql image query
-  const dataThumb = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "banner-thumb.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1010) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
+  
   return (
-    <section sx={styles.banner} id="home">
+    <section id="aboutbabyduke">
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
@@ -59,13 +50,12 @@ export default function Banner() {
           <Text as="p" variant="heroSecondary">
             {data.text}
           </Text>
-          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://fastswap.finance//#/swap?inputCurrency=0x4d338614fc25afe6edf3994f331b4bad32fb3c6a&outputCurrency=0xaee234825dc4687fae606485c1ebd06336052bcc", '_blank')}>{data.btn_fastswap}</Button>
-          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://pancakeswap.finance/swap?outputCurrency=0xaee234825dc4687fae606485c1ebd06336052bcc", '_blank')}>{data.btn_pancakeswap}</Button>
-          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://www.dextools.io/app/pancakeswap/pair-explorer/0xe545eabdd3b07c68b0d0df130a24b2dc4a10be61", '_blank')}>{data.btn_dextools}</Button>
-        </Box>
 
-        <Box sx={styles.banner.imageBox}>
-          <Img fluid={dataThumb.placeholderImage.childImageSharp.fluid} />
+          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://fastswap.finance//#/swap?inputCurrency=0x4d338614fc25afe6edf3994f331b4bad32fb3c6a&outputCurrency=0x2Ed8Af8512f9F0a28D406F99861bbb03D5443Acf", '_blank')}>{data.btn_fastswap}</Button>
+          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://pancakeswap.finance/swap?outputCurrency=0x2Ed8Af8512f9F0a28D406F99861bbb03D5443Acf", '_blank')}>{data.btn_pancakeswap}</Button>
+          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://www.dextools.io/app/en/bnb/pair-explorer/0x54f6c6ac57f808e979119bdd14127af157b22b45", '_blank')}>{data.btn_dextools}</Button>
+          <Button sx={styles.banner.buttonGroup} variant="primary" onClick={() => window.open("https://bscscan.com/address/0x2Ed8Af8512f9F0a28D406F99861bbb03D5443Acf", '_blank')}>{data.btn_contract}</Button>
+        
         </Box>
       </Container>
     </section>

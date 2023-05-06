@@ -26,7 +26,7 @@ import { useStickyState } from '../contexts/app/app.provider';
 
 const data_en = {
   subTitle0: 'Duke',
-  subTitle1: 'Duke inu the first meme Token with underlying products and instant rewards for holders.',
+  subTitle1: 'Duke inu the first meme Token with List of underlying products and instant rewards for holders.',
   subTitle2: 'This is the list of our products in development that will earn Duke token by using it or providing LPs.',
   title: 'Why Duke Token?',
   features: [
@@ -51,7 +51,7 @@ const data_en = {
 
 const data_cn = {
   subTitle0: 'Duke',
-  subTitle1: 'Duke inu 是第一个具有基础产品和即时奖励的 meme 代币。',
+  subTitle1: 'Duke inu 是第一個具有基礎產品列表和持有人即時獎勵的 meme 代幣。',
   subTitle2: '这是我们正在开发的产品列表，这些产品将通过使用它或提供 LP 来获得 Duke 代币。',
   title: '为什么选择 Duke 代币？',
   features: [

@@ -4,6 +4,10 @@ export default [
     label: 'Home',
   },
   {
+    path: 'aboutbabyduke',
+    label: 'About Baby Duke'
+  },
+  {
     path: 'corefeature',
     label: 'How to earn',
   },

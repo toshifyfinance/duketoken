@@ -15,6 +15,10 @@ const menuItems_cn = [
     label: '主要的',
   },
   {
+    path: 'aboutbabyduke',
+    label: 'Baby Duke 關於'
+  },
+  {
     path: 'corefeature',
     label: '如何赚取',
   },
@@ -67,14 +71,14 @@ export default function Header({ className }) {
             ))}
           </Flex>
 
-          <Button
+          {/* <Button
             className="donate__btn"
             variant="secondary"
             aria-label="Get Started"
             onClick={() => window.open("https://bscscan.com/token/0xAEe234825dC4687faE606485c1eBD06336052bCc", '_blank')}
           >
             {scan_button}
-          </Button>
+          </Button> */}
 
           <MobileDrawer />
         </Container>

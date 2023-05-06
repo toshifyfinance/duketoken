@@ -15,7 +15,7 @@ var data_en = [
     id: 1,
     imgSrc: Performance,
     altText: '500 billion 50%',
-    title: '500 billion 50%',
+    title: 'A. 500 billion 50%',
     text:
       'Will be used to add liquidity on pancakeswap and fastswap 25% each.',
   },
@@ -23,7 +23,7 @@ var data_en = [
     id: 2,
     imgSrc: Partnership,
     altText: '40 billion 4%',
-    title: '40 billion 4%',
+    title: 'B. 40 billion 4%',
     text:
       'For marketing and exchange listings. 1 billion to VB.',
   },
@@ -31,7 +31,7 @@ var data_en = [
     id: 3,
     imgSrc: Subscription,
     altText: '100 billion 10%',
-    title: '100 billion 10%',
+    title: 'C. 100 billion 10%',
     text:
       'Incentivize for Fastswap.finance  bsc Lps pools for 5 years.',
   },
@@ -39,7 +39,7 @@ var data_en = [
     id: 4,
     imgSrc: Support,
     altText: '100 billion 10%',
-    title: '100 billion 10%',
+    title: 'D. 100 billion 10%',
     text:
       'Incentivizes for fastswap eth incentivizes.',
   },
@@ -47,7 +47,7 @@ var data_en = [
     id: 5,
     imgSrc: Support,
     altText: '100 billion 10%',
-    title: '100 billion 10%',
+    title: 'E. 100 billion 10%',
     text:
       'Incentivizes to our ecosystem products.',
   },
@@ -55,7 +55,7 @@ var data_en = [
     id: 6,
     imgSrc: Support,
     altText: '100 billion 10%',
-    title: '100 billion 10%',
+    title: 'F. 100 billion 10%',
     text:
       'Incentivizes for Lps on pancakeswap, uniswap and all the dexs across Chains.',
   },
@@ -63,26 +63,34 @@ var data_en = [
     id: 7,
     imgSrc: Subscription,
     altText: '50 billions 5%',
-    title: '50 billions 5%',
+    title: 'G. 50 billions 5%',
     text:
       'Incentivizes for dapps across chains.',
   },
   {
     id: 8,
     imgSrc: Partnership,
-    altText: '1 billion 0.1%',
-    title: '1 billion 0.1%',
+    altText: '1 billion 1%',
+    title: 'H. 1 billion 1%',
     text:
       'Indians Covid19 relief.',
   },
-  {
-    id: 9,
-    imgSrc: Partnership,
-    altText: 'Bug bounty 0.9%',
-    title: 'Bug bounty 0.9%',
-    text:
-      '',
-  },
+  // {
+  //   id: 8,
+  //   imgSrc: Partnership,
+  //   altText: '1 billion 0.1%',
+  //   title: '1 billion 0.1%',
+  //   text:
+  //     'Indians Covid19 relief.',
+  // },
+  // {
+  //   id: 9,
+  //   imgSrc: Partnership,
+  //   altText: 'Bug bounty 0.9%',
+  //   title: 'Bug bounty 0.9%',
+  //   text:
+  //     '',
+  // },
 ];
 
 var data_cn = [
@@ -90,7 +98,7 @@ var data_cn = [
     id: 1,
     imgSrc: Performance,
     altText: '500 十亿 50%',
-    title: '500 十亿 50%',
+    title: 'A. 500 十亿 50%',
     text:
       '将用于在 pancakeswap 和 fastswap 各增加 25% 的流动性。',
   },
@@ -98,7 +106,7 @@ var data_cn = [
     id: 2,
     imgSrc: Partnership,
     altText: '40 十亿 4%',
-    title: '40 十亿 4%',
+    title: 'B. 40 十亿 4%',
     text:
       '用于营销和交易所列表。 10 亿到 VB。 ',
   },
@@ -106,7 +114,7 @@ var data_cn = [
     id: 3,
     imgSrc: Subscription,
     altText: '100 十亿 10%',
-    title: '100 十亿 10%',
+    title: 'C. 100 十亿 10%',
     text:
       'Incentivize for Fastswap.finance  bsc Lps pools for 5 years.',
   },
@@ -114,7 +122,7 @@ var data_cn = [
     id: 4,
     imgSrc: Support,
     altText: '100 十亿 10%',
-    title: '100 十亿 10%',
+    title: 'D. 100 十亿 10%',
     text:
       '激励 Fastswap.finance bsc Lps 池 5 年。 ',
   },
@@ -122,7 +130,7 @@ var data_cn = [
     id: 5,
     imgSrc: Support,
     altText: '100 十亿 10%',
-    title: '100 十亿 10%',
+    title: 'E. 100 十亿 10%',
     text:
       '激励我们的生态系统产品。 ',
   },
@@ -130,7 +138,7 @@ var data_cn = [
     id: 6,
     imgSrc: Support,
     altText: '100 十亿 10%',
-    title: '100 十亿 10%',
+    title: 'F. 100 十亿 10%',
     text:
       '在 pancakeswap、uniswap 和跨链的所有 dex 上激励 Lps。 ',
   },
@@ -138,26 +146,26 @@ var data_cn = [
     id: 7,
     imgSrc: Subscription,
     altText: '50 十亿 5%',
-    title: '50 十亿 5%',
+    title: 'G. 50 十亿 5%',
     text:
       '激励跨链的 dapps。',
   },
   {
     id: 8,
     imgSrc: Partnership,
-    altText: '1 十亿 0.1%',
-    title: '1 十亿 0.1%',
+    altText: '1 十亿 1%',
+    title: 'H. 1 十亿 1%',
     text:
       '印度人 Covid19 救济。 ',
   },
-  {
-    id: 9,
-    imgSrc: Partnership,
-    altText: '错误赏金 0.9%',
-    title: '错误赏金 0.9%',
-    text:
-      '',
-  },
+  // {
+  //   id: 9,
+  //   imgSrc: Partnership,
+  //   altText: '错误赏金 0.9%',
+  //   title: '错误赏金 0.9%',
+  //   text:
+  //     '',
+  // },
 ];
 
 const data_title_en = "Duke Token Tokenomics";
